@@ -3349,7 +3349,7 @@ class coinbase(Exchange, ImplicitAPI):
         :returns int[][]: A list of candles ordered, open, high, low, close, volume
         """
         self.load_markets()
-        maxLimit = 300
+        maxLimit = 350
         limit = maxLimit if (limit is None) else min(limit, maxLimit)
         paginate = False
         paginate, params = self.handle_option_and_params(params, 'fetchOHLCV', 'paginate', False)
